@@ -3,6 +3,8 @@ const PORT = (process.env.PORT || 3000)
 		, PUBLIC = __dirname + '/public'
 
 var express = require('express')
+	, redis = require('./lib/redis_connect')()
+	, scraper = require('./lib/github_scraper')
 	, app = module.exports = express()
 ;
 
@@ -16,7 +18,9 @@ app.use(app.router);
 app.use(express.static(PUBLIC, {maxAge: 60 * 60 * 1000}));
 
 app.get('/', function(req, res) {
-	res.end('<h1>Em desenvolvimento</h1>');
+	//redis.zrange("nwf", 0, -1, function(err, result) {
+		res.end('<h1>Em desenvolvimento</h1>');
+	//});
 });
 
 app.listen(PORT, function() {
