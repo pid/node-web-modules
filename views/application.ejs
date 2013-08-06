@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#">
+	<head>
+		<meta charset="utf-8">
+		<title><% site.title %>: <% site.subtitle %></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta name="google-site-verification" content="<% site.google_web_master %>">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+
+		<meta name="author" content="<% site.author %>">
+		<meta name="description" content="<% site.subtitle %>">
+		
+		<meta property="og:title" content="<% site.title %>">
+		<meta property="og:description" content="<% site.subtitle %>">
+		<meta property="og:url" content="<% domain %>">
+		<meta property="og:site_name" content="<% site.title %>">
+		<meta property="og:type" content="website">
+		<meta property="og:image"	content="<% domain %><% site.main_image %>">
+
+		<meta property="article:author"	content="<% site.author_google_plus %>">
+		<meta property="article:section" content="main">
+		<meta property="article:tag" content="Node.js, Modules, Web Modules, Node.js Frameworks, Web Frameworks">
+
+		<meta name="twitter:creator"	content="@<% site.author_twitter %>">
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:url" content="<% domain %>">
+		<meta name="twitter:title" content="<% site.title %>">
+		<meta name="twitter:description" content="<% site.subtitle %>">
+		<meta name="twitter:image" content="<% domain %><% site.main_image %>">
+
+		<link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+		<link href='http://fonts.googleapis.com/css?family=Noticia+Text' rel='stylesheet'>
+		<link href="application.css" rel="stylesheet">
+	</head>
+	<body>
+		<header class="header">
+			<h1>Node Web Modules</h1>
+			<h2>A collection of web frameworks for Node.js</h2>
+		</header>
+		<nav class="social-box">
+			<% include _socials %>
+		</nav>
+		<main>
+			
+		</main>
+		<footer class="footer">
+			<strong>
+				Copyright (c) by <a href="http://crpwebdev.com" target="_blank">Caio R. Pereira</a> 2013. Powered by <a href="http://github.com" target="_blank">Github</a> with <a href="http://jekyllrb.com" target="_blank">Jekyll</a>.
+				<br>
+				Do you wanna add your module? <a href="https://github.com/caio-ribeiro-pereira/node-web-frameworks" target="_blank">Just fork me</a> :)
+				<br>
+				Are you looking for a good book about Node.js? <a href="http://www.casadocodigo.com.br/products/livro-nodejs" target="_blank">Read this!</a>
+			</strong>
+			<br>
+			<small>
+				<a href="http://nodejs.org" target="_blank">Node.js</a> is an official trademark of <a href="http://joyent.com" target="_blank">Joyent</a>. This site is not formally related to or endorsed by the official Joyent commercial project.
+			</small>
+		</footer>
+		<% include _analytics %>
+	</body>
+</html>
