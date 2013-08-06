@@ -4,9 +4,15 @@ const PORT = (process.env.PORT || 3000)
 
 var express = require('express')
 	, redis = require('./lib/redis_connect')()
-	, scraper = require('./lib/github_scraper')
+	, scraper = require('./lib/github_scraper')()
+	, agent = require('strong-agent')
 	, app = module.exports = express()
 ;
+
+agent.profile(
+  process.env.NODEFLY_APPLICATION_KEY,
+  ['node-web-frameworks','Heroku']
+);
 
 app.use(express.logger('dev'));
 app.set('views', VIEWS);

@@ -11,7 +11,8 @@
     "request": "~2.25.x",
     "forever-monitor": "~1.2.x",
     "redis": "~0.8.x",
-    "hiredis": "~0.1.15",
-    "moment": "~2.1.0"
+    "hiredis": "~0.1.x",
+    "moment": "~2.1.x",
+    "strong-agent": "~0.2.x"
   }
 }
