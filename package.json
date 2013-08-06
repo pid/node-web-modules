@@ -1,0 +1,16 @@
+{
+  "name": "node-web-frameworks",
+  "version": "0.0.1",
+  "private": false,
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.2.x"
+  },
+  "dependencies": {
+    "express": "~3.3.x",
+    "request": "~2.25.x",
+    "forever-monitor": "~1.2.x",
+    "redis": "~0.8.x",
+    "hiredis": "~0.1.15"
+  }
+}

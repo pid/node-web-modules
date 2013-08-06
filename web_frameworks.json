@@ -1,0 +1,18 @@
+{
+		"express": {"github": "https://api.github.com/repos/visionmedia/express", "image": "images/express.png"}
+	, "connect": {"github": "https://api.github.com/repos/senchalabs/Connect", "image": "images/connect.png"}
+	, "compound": {"github": "https://api.github.com/repos/1602/compound", "image": "images/compound.png"}
+	, "derby": {"github": "https://api.github.com/repos/codeparty/derby", "image": "images/derby.png"}
+	, "flatiron": {"github": "https://api.github.com/repos/flatiron/flatiron", "image": "images/flatiron.png"}
+	, "geddy": {"github": "https://api.github.com/repos/mde/geddy", "image": "images/geddy.png"}
+	, "genji": {"github": "https://api.github.com/repos/lsm/genji", "image": "images/genji.png"}
+	, "kiss.js": {"github": "https://api.github.com/repos/stanislavfeldman/kiss.js", "image": "images/kiss.js.png"}
+	, "locomotive": {"github": "https://api.github.com/repos/jaredhanson/locomotive", "image": "images/locomotive.png"}
+	, "matador": {"github": "https://api.github.com/repos/obvious/matador", "image": "images/matador.png"}
+	, "meteor": {"github": "https://api.github.com/repos/meteor/meteor", "image": "images/meteor.png"}
+	, "partial.js": {"github": "https://api.github.com/repos/petersirka/partial.js", "image": "images/partial.js.png"}
+	, "sails": {"github": "https://api.github.com/repos/balderdashy/sails", "image": "images/sails.png"}
+	, "socketstream": {"github": "https://api.github.com/repos/socketstream/socketstream", "image": "images/socketstream.png"}
+	, "spludo": {"github": "https://api.github.com/repos/DracoBlue/spludo", "image": "images/spludo.png"}
+	, "strata": {"github": "https://api.github.com/repos/mjijackson/strata", "image": "images/strata.png"}
+}
