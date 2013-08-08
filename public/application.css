@@ -53,7 +53,7 @@ main{margin:0 auto;max-width:1000px}
 .box__detail{float:left;word-wrap:break-word;width:380px}
 .box__detail span{display:block}
 .box__aside{text-align:right}
-.social-box{text-align:center;margin:0 auto;display:block}
-.social-button{display:inline-block;margin:0 10px;width:80px}
+.social{text-align:center;margin:0 auto;display:block}
+.social__button{display:inline-block;margin:0 10px;width:80px}
 .button{font-size:1.2em;background:#fff;color:#333;text-align:center;padding:5px;margin:5px;border:1px solid #999;display:inline-block;text-decoration:none}
 .button:hover{background:#eff}
