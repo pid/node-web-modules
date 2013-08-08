@@ -1,4 +1,4 @@
-global.NWF = 'NWF';
+global.NWM = 'NWM';
 
 const PORT = (process.env.PORT || 3000)
 		, VIEWS = __dirname + '/views'
@@ -11,7 +11,7 @@ var express = require('express')
 	, site = require('./config.json')
 	, redis = require('./lib/redis_connect')()
 	, cron = require('./lib/cron_task')()
-	//, github = require('./lib/github_api')()
+	, github = require('./lib/github_api')()
 	, app = module.exports = express()
 ;
 
@@ -23,16 +23,17 @@ app.use(app.router);
 app.use(express.static(PUBLIC, MAXAGE));
 
 app.get('/', function(req, res) {
-	redis.zrevrange(NWF, 0, -1, function(err, result) {
-		for(var i = 0; i < result.length; i++) {
-			result[i] = JSON.parse(result[i]);
+	redis.zrevrange(NWM, 0, -1, function(err, modules) {
+		var max = modules.length
+			, domain = (req.protocol+'://'+req.host);
+		for(var i = 0; i < max; i++) {
+			modules[i] = JSON.parse(modules[i]);
 		}
-		res.render('application', {site: site
-														 , modules: result
-														 , domain: (req.protocol+'://'+req.host)});
+		var params = {site: site, modules: modules, domain: domain};
+		res.render('application', params);
 	});
 });
 
 app.listen(PORT, function() {
-	console.log('Node web framework on port %d', PORT);
+	console.log('Node web module running on port %d', PORT);
 });

@@ -1,7 +1,7 @@
-<% modules.forEach(function(repo) { %>
+<% modules.forEach(function(repo, index) { %>
 	<section class="box">
 		<header class="box__header js-web-module-header">
-			<h1><%= repo.name %></h1>
+			<h1>#<%= (index+1) %> <%=: repo.name | capitalize %></h1>
 		</header>
 		<div class="box__main js-web-module-main">
 			<article class="box__content">
@@ -11,8 +11,12 @@
 					</a>
 					<div class="box__detail">
 						<span>
+							<strong>Watchers:</strong>
+							<%= repo.watchers %>
+						</span>
+						<span>
 							<strong>Author:</strong>
-							<a href="<%= repo.author_url %>" target="_blank"><%= repo.author %></a>
+							<a href="<%= repo.author_url %>" target="_blank"><%=: repo.author | capitalize%></a>
 						</span>
 						<span>
 							<strong>Description:</strong>
@@ -25,14 +29,6 @@
 						<span>
 							<strong>Forks:</strong>
 							<%= repo.forks %>
-						</span>
-						<span>
-							<strong>Watchers:</strong>
-							<%= repo.watchers %>
-						</span>
-						<span>
-							<strong>Contributors:</strong>
-							<%= repo.contributors %>
 						</span>
 						<span>
 							<strong>Open issues:</strong>
