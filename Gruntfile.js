@@ -12,6 +12,7 @@ module.exports = function(grunt) {
             "uglify/lib/*.js"
           , "uglify/nwm.js"
           , "uglify/modules/*.js"
+          , "uglify/application.js"
         ],
         dest: "public/application.js"
       }

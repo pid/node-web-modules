@@ -11,7 +11,7 @@ var express = require('express')
 	, site = require('./config.json')
 	, redis = require('./lib/redis_connect')()
 	, cron = require('./lib/cron_task')()
-	//, github = require('./lib/github_api')()
+	, github = require('./lib/github_api')()
 	, app = module.exports = express()
 ;
 
@@ -24,7 +24,10 @@ app.use(app.router);
 app.use(express.static(PUBLIC, MAXAGE));
 
 app.get('/', function(req, res) {
-	redis.zrange(NWF, 0, -1, function(err, result) {
+	redis.zrevrange(NWF, 0, -1, function(err, result) {
+		for(var i = 0; i < result.length; i++) {
+			result[i] = JSON.parse(result[i]);
+		}
 		res.render('application', {site: site
 														 , modules: result
 														 , domain: (req.protocol+'://'+req.host)});

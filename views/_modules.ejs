@@ -1,51 +1,50 @@
-<% modules.forEach(function(m) { %>
-	<% var repo = JSON.parse(m) %>
+<% modules.forEach(function(repo) { %>
 	<section class="box">
-		<header class="box__header js-toggle-header">
-			<h1><% repo.name %></h1>
+		<header class="box__header js-web-module-header">
+			<h1><%= repo.name %></h1>
 		</header>
-		<div class="box__main js-toggle-github">
-			<article class="box__content js-content">
-				<figure class="box__figure js-repo-figure">
-					<a href="<% repo.url %>" target="_blank">
-						<img src="<% repo.image %>" class="box__image" width="220" height="160">
+		<div class="box__main js-web-module-main">
+			<article class="box__content">
+				<figure class="box__figure">
+					<a href="<%= repo.url %>" target="_blank">
+						<img src="<%= repo.image %>" class="box__image" width="220" height="160">
 					</a>
 					<div class="box__detail">
 						<span>
 							<strong>Author:</strong>
-							<a href="<% repo.author_url %>" target="_blank"><% repo.author %></a>
+							<a href="<%= repo.author_url %>" target="_blank"><%= repo.author %></a>
 						</span>
 						<span>
 							<strong>Description:</strong>
-							<% repo.description %>
+							<%= repo.description %>
 						</span>
 						<span>
 							<strong>Since:</strong>
-							<% repo.created_at %>
+							<%= repo.created_at %>
 						</span>
 						<span>
 							<strong>Forks:</strong>
-							<% repo.forks %>
+							<%= repo.forks %>
 						</span>
 						<span>
 							<strong>Watchers:</strong>
-							<% repo.watchers %>
+							<%= repo.watchers %>
 						</span>
 						<span>
 							<strong>Contributors:</strong>
-							<% repo.contributors %>
+							<%= repo.contributors %>
 						</span>
 						<span>
 							<strong>Open issues:</strong>
-							<% repo.issues %>
+							<%= repo.issues %>
 						</span>
 					</div>
 				</figure>
 			</article>
 			<aside class="box__aside">
-				<a href="<% repo.url %>" class="button" target="_blank">Github</a>
-				<a href="<% repo.site %>" class="button" target="_blank">Site</a>
+				<a href="<%= repo.url %>" class="button" target="_blank">Github</a>
+				<a href="<%= repo.site %>" class="button" target="_blank">Site</a>
 			</aside>
 		</div>
 	</section>
-<% } %>
+<% }) %>

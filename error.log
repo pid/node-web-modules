@@ -1,22 +1,22 @@
-SyntaxError: Unexpected token ; in "/Users/caio/Documents/workspace/nodejs/node-web-modules/views/application.ejs"
-    at Object.Function (<anonymous>)
-    at exports.compile (/Users/caio/Documents/workspace/nodejs/node-web-modules/node_modules/ejs/lib/ejs.js:236:14)
-    at Object.exports.render (/Users/caio/Documents/workspace/nodejs/node-web-modules/node_modules/ejs/lib/ejs.js:283:10)
-    at View.exports.renderFile [as engine] (/Users/caio/Documents/workspace/nodejs/node-web-modules/node_modules/ejs/lib/ejs.js:317:20)
-    at View.render (/Users/caio/Documents/workspace/nodejs/node-web-modules/node_modules/express/lib/view.js:76:8)
-    at Function.app.render (/Users/caio/Documents/workspace/nodejs/node-web-modules/node_modules/express/lib/application.js:505:10)
-    at ServerResponse.res.render (/Users/caio/Documents/workspace/nodejs/node-web-modules/node_modules/express/lib/response.js:756:7)
-    at /Users/caio/Documents/workspace/nodejs/node-web-modules/app.js:28:7
-    at try_callback (/Users/caio/Documents/workspace/nodejs/node-web-modules/node_modules/redis/index.js:548:9)
-    at RedisClient.return_reply (/Users/caio/Documents/workspace/nodejs/node-web-modules/node_modules/redis/index.js:630:13)
-SyntaxError: Unexpected token ; in "/Users/caio/Documents/workspace/nodejs/node-web-modules/views/application.ejs"
-    at Object.Function (<anonymous>)
-    at exports.compile (/Users/caio/Documents/workspace/nodejs/node-web-modules/node_modules/ejs/lib/ejs.js:236:14)
-    at Object.exports.render (/Users/caio/Documents/workspace/nodejs/node-web-modules/node_modules/ejs/lib/ejs.js:283:10)
-    at View.exports.renderFile [as engine] (/Users/caio/Documents/workspace/nodejs/node-web-modules/node_modules/ejs/lib/ejs.js:317:20)
-    at View.render (/Users/caio/Documents/workspace/nodejs/node-web-modules/node_modules/express/lib/view.js:76:8)
-    at Function.app.render (/Users/caio/Documents/workspace/nodejs/node-web-modules/node_modules/express/lib/application.js:505:10)
-    at ServerResponse.res.render (/Users/caio/Documents/workspace/nodejs/node-web-modules/node_modules/express/lib/response.js:756:7)
-    at /Users/caio/Documents/workspace/nodejs/node-web-modules/app.js:28:7
-    at try_callback (/Users/caio/Documents/workspace/nodejs/node-web-modules/node_modules/redis/index.js:548:9)
-    at RedisClient.return_reply (/Users/caio/Documents/workspace/nodejs/node-web-modules/node_modules/redis/index.js:630:13)
+
+TypeError: Cannot read property 'login' of undefined
+    at Request._callback (/Users/caio/Documents/workspace/nodejs/node-web-modules/lib/github_api.js:27:27)
+    at Request.self.callback (/Users/caio/Documents/workspace/nodejs/node-web-modules/node_modules/request/index.js:148:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/Users/caio/Documents/workspace/nodejs/node-web-modules/node_modules/request/index.js:891:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/Users/caio/Documents/workspace/nodejs/node-web-modules/node_modules/request/index.js:842:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:910:16
+    at process._tickCallback (node.js:415:13)
+
+TypeError: Cannot read property 'login' of undefined
+    at Request._callback (/Users/caio/Documents/workspace/nodejs/node-web-modules/lib/github_api.js:27:27)
+    at Request.self.callback (/Users/caio/Documents/workspace/nodejs/node-web-modules/node_modules/request/index.js:148:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/Users/caio/Documents/workspace/nodejs/node-web-modules/node_modules/request/index.js:891:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/Users/caio/Documents/workspace/nodejs/node-web-modules/node_modules/request/index.js:842:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:910:16
+    at process._tickCallback (node.js:415:13)
