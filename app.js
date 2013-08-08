@@ -1,3 +1,5 @@
+global.NWF = 'NWF';
+
 const PORT = (process.env.PORT || 3000)
 		, VIEWS = __dirname + '/views'
 		, PUBLIC = __dirname + '/public'
@@ -6,14 +8,12 @@ const PORT = (process.env.PORT || 3000)
 		, GZIP = {level: 9, memLevel: 9}
 
 var express = require('express')
-	, redis = require('./lib/redis_connect')()
-	, github_scraper = require('./lib/github_scraper')
 	, site = require('./config.json')
+	, redis = require('./lib/redis_connect')()
+	, cron = require('./lib/cron_task')()
+	//, github = require('./lib/github_api')()
 	, app = module.exports = express()
 ;
-
-require('./lib/cron_task')();
-require('./lib/nodefly_profiler')()
 
 app.use(express.favicon());
 app.use(express.logger('dev'));
@@ -24,10 +24,11 @@ app.use(app.router);
 app.use(express.static(PUBLIC, MAXAGE));
 
 app.get('/', function(req, res) {
-	//redis.zrange("nwf", 0, -1, function(err, result) {
+	redis.zrange(NWF, 0, -1, function(err, result) {
 		res.render('application', {site: site
+														 , modules: result
 														 , domain: (req.protocol+'://'+req.host)});
-	//});
+	});
 });
 
 app.listen(PORT, function() {

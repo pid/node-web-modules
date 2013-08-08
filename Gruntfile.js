@@ -9,8 +9,9 @@ module.exports = function(grunt) {
       },
       tmp: {
         src: [
-            "uglify/lib/jquery-*.js"
-          , "uglify/*.js"
+            "uglify/lib/*.js"
+          , "uglify/nwm.js"
+          , "uglify/modules/*.js"
         ],
         dest: "public/application.js"
       }

@@ -1,3 +1,3 @@
 $(function() {
-	
+	new NWM.WebModule();
 });
