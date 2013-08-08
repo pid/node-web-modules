@@ -12,9 +12,9 @@
     "forever-monitor": "~1.2.x",
     "redis": "~0.8.x",
     "hiredis": "~0.1.x",
-    "ejs": "~0.8.4",
-    "cron": "~1.0.1",
-    "moment": "~2.1.0"
+    "ejs": "~0.8.x",
+    "cron": "~1.0.x",
+    "moment": "~2.1.x"
   },
   "devDependencies": {
     "grunt-contrib-concat": "~0.3.0",
