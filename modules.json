@@ -1,5 +1,5 @@
 {
-		"express": "visionmedia/express"
+    "express": "visionmedia/express"
 	, "connect": "senchalabs/Connect"
 	, "compound": "1602/compound"
 	, "derby": "codeparty/derby"
@@ -15,4 +15,5 @@
 	, "socketstream": "socketstream/socketstream"
 	, "spludo": "DracoBlue/spludo"
 	, "strata": "mjijackson/strata"
+	, "hapi": "spumko/hapi"
 }
